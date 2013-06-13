@@ -1,9 +1,13 @@
 Dropbox::Application.routes.draw do
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+     match 'dropbox/:id' => 'users#sign_in'
+     match 'dropbox/:id' => 'users#sign_out'
+
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

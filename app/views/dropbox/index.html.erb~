@@ -1,0 +1,14 @@
+hello<br/>
+<marquee>hello&nbsp;&nbsp;<a href="http://www.google.com">google</a></marquee><br/>
+<html>
+<head>
+<title>DropBox:Choose and install buttons</title>
+</head>
+<body>
+<form>
+<input type="button" value="dropbox chooser"name="selected-file" onclick=""/>
+</form>
+</body>
+</html>
+
+

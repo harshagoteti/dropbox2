@@ -1,5 +1,7 @@
 class DropboxController < ApplicationController
        def index 
        end
-       
+       def users
+       end
+
 end
