@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'devise'
 gem 'dropbox-sdk'
+gem 'dropbox-api'
+gem 'dropbox'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -1,13 +1,31 @@
-hello<br/>
+hello!... Welcome to Dropbox desktop application.<br/><br/><br/>
 <html>
 <head>
 <title>DropBox:Choose and install buttons</title>
 </head>
 <body>
 <form>
-<input type="button" value="dropbox chooser"name="selected-file"/>
+<button onclick="btn_drop()">Dropboxchooser</button>
+<p id="demo"></p>
 </form>
+<a href="http://www.drop_box.com:3000/users/sign_in" onclick="javascript:void window.open('http://www.drop_box.com:3000/users/sign_in','1371457282856','width=10,height=10,toolbar=1,menubar=1,location=1,status=1,scrollbars=1,resizable=1,left=30,top=50');return false;">Dropbox Popup</a>;
 </body>
 </html>
+<script type="text/javascript">
+function btn_drop(){
+var r;
+var r=confirm("Are You want to connect to dropbox!");
+if (r==true)
+  {
+  x="now ur connecting to Dropbox as user";
+   }
+else
+  {
+  x="You pressed Cancel!.... Sorry we are unable to connect to dropbox... click yes!";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+	
+</script>
 
 

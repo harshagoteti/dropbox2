@@ -6,7 +6,7 @@ Dropbox::Application.routes.draw do
 
   # Sample of regular route:
      match 'dropbox/:id' => 'users#sign_in'
-     match 'dropbox/:id' => 'users#sign_out'
+     match 'dropbox/dropboxchooser' => 'dropbox#index'
 
   # Keep in mind you can assign values other than :controller and :action
 

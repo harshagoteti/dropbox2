@@ -6,3 +6,9 @@
         }, false);
 </script>
 <script type="text/javascript" src="https://www.dropbox.com/static/api/1/dropins.js" id="dropboxjs" data-app-key="YOUR_APP_KEY"></script>
+<script type="text/javascript">
+function btn_drop(){
+alert("Hello World!");
+	
+}
+</script>

@@ -1,7 +1,13 @@
 class DropboxController < ApplicationController
-       def index 
-       end
-       def users
-       end
-
+       def index
+  render :action => "index" 
+redirect :to =>"sign_in"
+    end
+def uploadFile
+redirect :to =>"sign_in"
+end
+def edit
+end
+def new
+end
 end
