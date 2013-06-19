@@ -18,6 +18,7 @@ win=window.open(mypage,myname,settings);}
             alert("Here's the chosen file: " + e.files[0].link)
         }, false);
 </script>
+<meta name="google-translate-customization" content="b7dae49de79149d6-060542b9d585fa55-ge4fa508ef2a9ca4f-15"></meta>
 </head>
 <body>
 <form>
@@ -55,7 +56,7 @@ document.getElementById("demo").innerHTML=x;
     <h3 id="myModalLabel">Modal header</h3>
   </div>
   <div class="modal-body">
-    <p>One fine body…</p>
+    <p>One fine body…</p
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -63,3 +64,4 @@ document.getElementById("demo").innerHTML=x;
   </div>
 </div>
 
+<button type="button" class="btn btn-primary" data-loading-text="Loading...">Loading state</button><br/>
