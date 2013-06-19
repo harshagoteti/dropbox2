@@ -1,14 +1,31 @@
 hello!... Welcome to Dropbox desktop application.<br/><br/><br/>
 <html>
 <head>
-<title>DropBox:Choose and install buttons</title>
+<title>DropBox:Chooserbuttons</title>
+<script language="javascript" type="text/javascript">
+var win=null;
+function NewWindow(mypage,myname,w,h,scroll,pos){
+if(pos=="random"){LeftPosition=(screen.width)?Math.floor(Math.random()*(screen.width-w)):100;TopPosition=(screen.height)?Math.floor(Math.random()*((screen.height-h)-75)):100;}
+if(pos=="center"){LeftPosition=(screen.width)?(screen.width-w)/2:100;TopPosition=(screen.height)?(screen.height-h)/2:100;}
+else if((pos!="center" && pos!="random") || pos==null){LeftPosition=0;TopPosition=20}
+settings='width='+w+',height='+h+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',location=yes,directories=yes,status=yes,menubar=yes,toolbar=yes,resizable=yes';
+win=window.open(mypage,myname,settings);}
+</script><br/>
+<input type="dropbox-chooser" name="selected-file" id="db-chooser"/><br/>
+<script type="text/javascript">
+    document.getElementById("db-chooser").addEventListener("DbxChooserSuccess",
+        function(e) {
+            alert("Here's the chosen file: " + e.files[0].link)
+        }, false);
+</script>
 </head>
 <body>
 <form>
-<button onclick="btn_drop()">Dropboxchooser</button>
-<p id="demo"></p>
+<button name="slelcted file is" onclick="btn_drop()">Dropboxchooser</button><br/>
+<input type="dropbox-chooser" name="selected-file is" style="visibility: hidden;"/>
 </form>
-<a href="http://www.drop_box.com:3000/users/sign_in" onclick="javascript:void window.open('http://www.drop_box.com:3000/users/sign_in','1371457282856','width=10,height=10,toolbar=1,menubar=1,location=1,status=1,scrollbars=1,resizable=1,left=30,top=50');return false;">Dropbox Popup</a>;
+<a href="http://www.drop_box.com:3000/users/sign_in" onclick="javascript:void window.open('http://www.drop_box.com:3000/users/sign_in','1371457282856','width=10,height=10,toolbar=1,menubar=1,location=1,status=1,scrollbars=1,resizable=1,left=30,top=50');return false;">Dropbox Popup</a>;<br/>
+<a href="http://www.drop_box.com:3000" onclick="NewWindow(this.href,'Dropbox','50','50','yes','center');return false" onfocus="this.blur()">YourLinkText</a>
 </body>
 </html>
 <script type="text/javascript">
@@ -28,4 +45,21 @@ document.getElementById("demo").innerHTML=x;
 	
 </script>
 
+<!-- Button to trigger modal -->
+<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
 
